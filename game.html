@@ -1,0 +1,117 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    input, button { padding: 10px; font-size: 16px; }
+    #feedback { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Guess the Number!</h1>
+  <p>Guess a number between 1 and 20:</p>
+  <input type="number" id="guessInput" min="1" max="20">
+  <button id="submitBtn">Guess!</button>
+  <div id="feedback"></div>
+
+  <script>
+    const secret = Math.floor(Math.random() * 20) + 1;
+    const feedback = document.getElementById('feedback');
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const guess = Number(document.getElementById('guessInput').value);
+      if (!guess) {
+        feedback.textContent = 'Please enter a number!';
+      } else if (guess === secret) {
+        feedback.textContent = '🎉 Correct! You’re a winner!';
+      } else if (guess > secret) {
+        feedback.textContent = 'Too high! Try again.';
+      } else {
+        feedback.textContent = 'Too low! Try again.';
+      }
+    });
+  </script>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Puzzle (Pure CSS)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Number Puzzle</h1>
+  <div class="puzzle-grid">
+    Example row with one active cell (you can replicate to set up your grid) 
+    <div class="cell">
+      <input type="text" maxlength="1" />
+      <span class="number">1</span>
+    </div>
+     Add more cells as needed 
+  </div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Movie (Pure CSS)</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f0f0f0;
+      color: #333;
+    }
+    .movie {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .inputs {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .inputs input {
+      width: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      text-transform: uppercase;
+    }
+    /* Valid letter styling */
+    .inputs input:valid {
+      border-color: #4CAF50;
+      background: #e8f5e9;
+    }
+    /* Invalid letter styling */
+    .inputs input:invalid {
+      border-color: #F44336;
+      background: #ffebee;
+    }
+  </style>
+</head>
+<body>
+  <div class="movie">
+    <h2>Guess the Movie:</h2>
+    <div class="hint">🧙‍♂️⚡</div> <!-- Emoji hint: Harry Potter -->
+  </div>
+  <form class="inputs">
+    <input type="text" pattern="[Hh]" required maxlength="1" />
+    <input type="text" pattern="[Aa]" required maxlength="1" />
+    <input type="text" pattern="[Rr]" required maxlength="1" />
+    <input type="text" pattern="[Rr]" required maxlength="1" />
+    <input type="text" pattern="[Yy]" required maxlength="1" />
+  </form>
+</body>
+</html>
+

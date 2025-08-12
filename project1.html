@@ -1,0 +1,300 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Theme Switcher</title>
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+            --font-style: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-style);
+            transition: all 0.5s ease-in-out;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 10px;
+            margin: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h1, p {
+            transition: color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Select Your Mood 🎭</h1>
+        <select id="moodSelect">
+            <option value="">--Choose Mood--</option>
+            <option value="happy">Happy 😄</option>
+          
+            <option value="sad">Sad 😢</option>
+             
+
+            <option value="calm">Calm 😌</option>
+            
+
+            <option value="energetic">Energetic ⚡</option>
+            
+
+        </select>
+
+        Audio elements
+        <audio id="happyAudio"
+        scr="happy1.mp3"></audio>
+        <p id="message">Your vibe will change instantly!</p>
+    </div>
+
+    <script>
+        const moodSelect = document.getElementById("moodSelect");
+        const root = document.documentElement;
+        const message = document.getElementById("message");
+
+        moodSelect.addEventListener("change", function () {
+            const mood = moodSelect.value;
+
+            if (mood === "happy") {
+                root.style.setProperty("--bg-color", "#fff7ae");
+                root.style.setProperty("--text-color", "#ff8c00");
+                root.style.setProperty("--font-style", "'Comic Sans MS', cursive");
+                message.textContent = "Stay bright and cheerful! 😄";
+              
+
+            } 
+            else if (mood === "sad") {
+                root.style.setProperty("--bg-color", "#a0c4ff");
+                root.style.setProperty("--text-color", "#003366");
+                root.style.setProperty("--font-style", "'Times New Roman', serif");
+                message.textContent = "It's okay to feel blue sometimes. 💙";
+            } 
+            else if (mood === "calm") {
+                root.style.setProperty("--bg-color", "#d0f0c0");
+                root.style.setProperty("--text-color", "#006400");
+                root.style.setProperty("--font-style", "'Georgia', serif");
+                message.textContent = "Peace and serenity all around. 🌿";
+            } 
+            else if (mood === "energetic") {
+                root.style.setProperty("--bg-color", "#ffb3ba");
+                root.style.setProperty("--text-color", "#ff0000");
+                root.style.setProperty("--font-style", "'Verdana', sans-serif");
+                message.textContent = "Let's go! Full power mode! ⚡";
+            }
+        });
+    </script>
+</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Theme Switcher with Audio</title>
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: #000;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Theme Switcher 🎵</h1>
+    <p>This page contains some moods.It will change  according to the user request</p>
+    <select id="moodSelector">
+        <option value="">-- Select Mood --</option>
+    
+        <option value="happy">😊 Happy</option>
+        
+        <option value="sad">😢 Sad</option>
+        <option value="calm">😌 Calm</option>
+        <option value="energetic">⚡ Energetic</option>
+        <option value="happ">happ</option>
+    </select>
+
+    <!-- Audio Elements -
+    <audio id="happyAudio" src="happy1.mp3"></audio>
+   
+    <audio id="sadAudio" src="sad1.mp3"></audio>
+   
+    <audio id="calmAudio" src="calm1.mp3"></audio>
+    
+    <audio id="energeticAudio" src="energy1.mp3"></audio>
+   
+    <script>
+        const moodSelector = document.getElementById('moodSelector');
+
+        // Function to stop all audios before playing a new one
+        function stopAllAudios() {
+            document.querySelectorAll("audio").forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        }
+
+        moodSelector.addEventListener('change', function () {
+            let mood = this.value;
+            stopAllAudios(); // Stop any currently playing audio
+
+           if (mood === "happy") {
+                document.documentElement.style.setProperty('--bg-color', '#ffeb3b');
+                document.documentElement.style.setProperty('--text-color', '#000');
+               document.getElementById("happyAudio").play();
+
+           } 
+          
+           
+            else if (mood === "sad") {
+                document.documentElement.style.setProperty('--bg-color', '#90caf9');
+                document.documentElement.style.setProperty('--text-color', '#0d47a1');
+                document.getElementById("sadAudio").play();
+            } 
+            else if (mood === "calm") {
+                document.documentElement.style.setProperty('--bg-color', '#c8e6c9');
+                document.documentElement.style.setProperty('--text-color', '#1b5e20');
+                document.getElementById("calmAudio").play();
+            } 
+            else if (mood === "energetic") {
+                document.documentElement.style.setProperty('--bg-color', '#ff7043');
+                document.documentElement.style.setProperty('--text-color', '#fff');
+                document.getElementById("energeticAudio").play();
+            }
+
+             
+            
+        });
+    </script>
+</body>
+</html>-->
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .mood-btn {
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+        .happy { background-color: #ffb400; }
+        .sad { background-color: #0077b6; }
+        .relax { background-color: #52b788; }
+        .energetic { background-color: #ff4d6d; }
+        .mood-btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎵 Mood Music Player 🎵</h1>
+    <p>Click a mood to play a random track</p>
+
+    <button class="mood-btn happy" onclick="playMood('happy')">😊 Happy</button>
+    <button class="mood-btn sad" onclick="playMood('sad')">😢 Sad</button>
+    <button class="mood-btn relax" onclick="playMood('relax')">😌 Relax</button>
+    <button class="mood-btn energetic" onclick="playMood('energetic')">💃 Energetic</button>
+
+    <script>
+        // Mood-wise song lists
+        const moodSongs = {
+            happy: [
+                'happy1.mp3',
+                'happy2.mp3',
+                'happy3.mp3'
+            ],
+            sad: [
+                'sad1.mp3',
+                'sad2.mp3',
+                'sad3.mp3'
+            ],
+            relax: [
+                'relax1.mp3',
+                'relax2.mp3',
+                'relax3.mp3'
+            ],
+            energetic: [
+                'energetic1.mp3',
+                'energetic2.mp3',
+                'energetic3.mp3'
+            ]
+        };
+
+        let currentAudio = null;
+
+        function playMood(mood) {
+            // Stop previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            // Pick random song from mood
+            const songs = moodSongs[mood];
+            const randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+            // Play song
+            currentAudio = new Audio(randomSong);
+            currentAudio.play();
+        }
+    </script>
+
+</body>
+</html>
