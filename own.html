@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+    h3{
+        color: crimson;
+        font-size: large;
+        font-style: italic;
+    }
+        
+    </style>
+</head>
+<body>
+    <center>
+    <h1 style="color: white;"><b>💥Welcome to the Energetic Session...💃</b></h1>
+    <h2>This Session will change your mood Instantly</h2>
+    <h2>🎶MUSIC🎵</h2>
+    <h3 style="color:red;">🥳Happy🥰</h3>
+    <audio controls>
+        <source src="happy1.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="happy2.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="happy3.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy4.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy5.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy6.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy7.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy8.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy9.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="happy10.mp3" type="audio/mp3">
+    </audio><br><br>
+    <h2>Sad</h2>
+    <audio controls>
+        <source src="sad1.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="sad2.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="sad3.mp3" type="audio/mp3">
+    </audio><br><br>
+     <audio controls>
+        <source src="sad4.mp3" type="audio/mp3">
+    </audio><br><br>
+    <h2>Energetic</h2>
+    <audio controls>
+        <source src="energetic1.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic2.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic3.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic4.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic5.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic6.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic7.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic8.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <audio controls>
+        <source src="energetic9.mp3" type="audio/mp3">
+    </audio>
+    <br><br>
+    <h2>Relax</h2>
+
+    <audio controls>
+        <source src="relax1.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="relax2.mp3" type="audio/mp3">
+    </audio><br><br>
+  <audio controls>
+        <source src="relax3.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax4.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax5.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax6.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax7.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="relax8.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax9.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax10.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax11.mp3" type="audio/mp3">
+    </audio><br><br>
+    <audio controls>
+        <source src="relax12.mp3" type="audio/mp3">
+    </audio><br><br>
+<audio controls>
+        <source src="relax13.mp3" type="audio/mp3">
+    </audio><br><br>
+
+
+
+
+    <h2>DANCE</h2>
+    <h2>JOKES</h2>
+    <h2>MOTIVATION</h2><br><br>
+    <h2>GAMES</h2>
+    <h1>Guess the Number!</h1>
+  <p>Guess a number between 1 and 20:</p>
+  <input type="number" id="guessInput" min="1" max="20">
+  <button id="submitBtn">Guess!</button>
+  <div id="feedback"></div>
+
+  <script>
+    const secret = Math.floor(Math.random() * 20) + 1;
+    const feedback = document.getElementById('feedback');
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const guess = Number(document.getElementById('guessInput').value);
+      if (!guess) {
+        feedback.textContent = 'Please enter a number!';
+      } else if (guess === secret) {
+        feedback.textContent = '🎉 Correct! You’re a winner!';
+      } else if (guess > secret) {
+        feedback.textContent = 'Too high! Try again.';
+      } else {
+        feedback.textContent = 'Too low! Try again.';
+      }
+    });
+  </script><br><br>
+  <div class="movie">
+    <h2>Guess the Movie:</h2>
+    <div class="hint" style="font-size: 50px;">🧙‍♂️⚡</div> 
+  </div><br><br>
+  <form class="inputs">
+    <input type="text" pattern="[Hh]" required maxlength="1" />
+    <input type="text" pattern="[Aa]" required maxlength="1" />
+    <input type="text" pattern="[Rr]" required maxlength="1" />
+    <input type="text" pattern="[Rr]" required maxlength="1" />
+    <input type="text" pattern="[Yy]" required maxlength="1" />
+  </form><br><br>
+  <div class="hint" style="font-size: 50px;">⚔ 🏹</div> <!-- Emoji hint: Harry Potter -->
+  </div><br><br>
+  <form class="inputs">
+    <input type="text" pattern="[Ss]" required maxlength="1" />
+    <input type="text" pattern="[Ii]" required maxlength="1" />
+    <input type="text" pattern="[Tt]" required maxlength="1" />
+    <input type="text" pattern="[Aa]" required maxlength="1" />
+    <input type="text" pattern="[Rr]" required maxlength="1" />
+    <input type="text" pattern="[Aa]" required maxlength="1" />
+    <input type="text" pattern="[Mm]" required maxlength="1" />
+    <input type="text" pattern="[Aa]" required maxlength="1" />
+    <input type="text" pattern="[Mm]" required maxlength="1" />
+</form><br><br>
+  <div class="hint" style="font-size: 50px;"> 🌕 👯‍♀ 🪘🥁 </div> <!-- Emoji hint: Harry Potter -->
+  </div><br><br>
+  <form class="inputs">
+    <input type="text" pattern="[Pp]" required maxlength="1" />
+    <input type="text" pattern="[Oo]" required maxlength="1" />
+    <input type="text" pattern="[Uu]" required maxlength="1" />
+    <input type="text" pattern="[Rr]" required maxlength="1" />
+    <input type="text" pattern="[Nn]" required maxlength="1" />
+    <input type="text" pattern="[Aa]" required maxlength="1" />
+    <input type="text" pattern="[Mm]" required maxlength="1" />
+    <input type="text" pattern="[Ii]" required maxlength="1" />
+    
+</form><br><br>
+ 
+
+
+</center>
+
+</body>
+</html>
